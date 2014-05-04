@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="YouTube Randomizer" />
+	<meta name="keywords" content="ytr" />
+	<meta name="author" content="dnsev" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="stylesheet" href="style.css" />
+	<script src="script.js"></script>
+	<title>dnsev / ytr / YouTube Randomizer</title>
+</head>
+<body>
+
+
+<div class="setup setup_visible">
+	<div class="vertical_align"><div class="vertical_aligner"></div><div class="vertical_aligned">
+
+		<div class="api_key_setup">
+			<div class="api_key_label">YouTube v3 API key:</div>
+			<input id="api_key" type="text" maxlength="39" />
+			<div class="default_key_container"><label><input id="api_key_default" type="checkbox" checked="checked" /><span>or use default API key</span></label></div>
+			<div class="center"><button id="begin">Begin</button></div>
+		</div>
+
+	</div></div>
+</div>
+<div class="results">
+
+	<div class="results_container">
+		<div class="results_label">
+			Results:<span class="count_container"><span id="count">0</span> checked, <span id="hits">0 hits</span>, <a class="link" id="status">active</a></span>
+		</div>
+		<div id="results_list"></div>
+	</div>
+
+</div>
+https://dnsev.github.io/ytr/
+
+</body>
+</html>

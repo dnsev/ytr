@@ -1,0 +1,146 @@
+body {
+	margin: 0;
+	padding: 0;
+	border: 0em hidden;
+	font-family: Verdana;
+	font-size: 18px;
+	overflow-y: scroll;
+	background-color: #f0f0f0;
+	color: #000000;
+}
+
+.vertical_align {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	white-space: nowrap;
+	line-height: normal;
+	text-align: center;
+}
+.vertical_aligner {
+	display: inline-block;
+	width: 0;
+	height: 100%;
+	vertical-align: middle;
+}
+.vertical_aligned {
+	display: inline-block;
+	white-space: normal;
+	line-height: normal;
+	vertical-align: middle;
+}
+
+.setup {
+}
+.setup:not(.setup_visible) {
+	display: none;
+}
+.api_key_setup {
+	display: inline-block;
+	text-align: left;
+}
+.api_key_label {
+	color: #808080;
+	font-size: 0.8em;
+}
+#api_key {
+	font-size: 18px;
+	font-family: Courier New;
+	padding: 0.2em;
+	width: 25em;
+	text-align: center;
+	background: #ffffff;
+	border: 1px solid #aaaaaa;
+}
+#api_key:hover {
+	border: 1px solid #6088aa;
+}
+#api_key:focus {
+	border: 1px solid #0080ff;
+}
+#api_key_default {
+	padding: 0;
+	margin: 0 0.2em 0 0;
+}
+.default_key_container {
+	display: block;
+	margin-top: 0.2em;
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.link {
+	color: #d00000;
+	cursor: pointer;
+}
+.link:hover {
+	color: #f00000;
+}
+
+.results {
+	text-align: center;
+}
+.results:not(.results_visible) {
+	display: none;
+}
+.results_container {
+	display: inline-block;
+	text-align: left;
+	width: 40em;
+	margin-top: 3em;
+}
+.results_label {
+	font-size: 2em;
+	border-bottom: 1px solid #aaaaaa;
+	margin-bottom: 0.25em;
+}
+#results_list {
+	margin-bottom: 2em;
+}
+
+.result {
+	display: table;
+	width: 100%;
+}
+.result+.result {
+	margin-top: 1em;
+}
+.result_cell {
+	display: table-cell;
+	vertical-align: top;
+}
+.result_cell+.result_cell {
+	padding-left: 0.25em;
+}
+.result_image {
+	display: block;
+	width: 240px;
+	height: 180px;
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
+}
+.result_line {
+}
+.result_line+.result_line {
+	margin-top: 0.25em;
+}
+.result_link {
+	color: #d00000;
+	cursor: pointer;
+}
+.result_link:hover {
+	color: #f00000;
+}
+
+.count_container {
+	opacity: 0.75;
+	font-size: 0.5em;
+	margin-left: 0.5em;
+}
