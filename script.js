@@ -993,7 +993,7 @@
 				"https://www.googleapis.com/youtube/v3/videos?key=" + this.api_key + "&part=snippet,contentDetails,status,statistics&maxResults={ID_COUNT}&id={ID_LIST}",
 				"GET", "json",
 				50, ",",
-				0.5,
+				0.25,
 				0, 0, 2, 1.0,
 				parse_video_data.bind(this), null, on_fail_bind
 			);
@@ -1394,7 +1394,7 @@
 			if (begin_request_timer !== null) {
 				clearTimeout(begin_request_timer);
 			}
-			begin_request_timer = setTimeout(on_begin_request_timeout, 10);
+			begin_request_timer = setTimeout(on_begin_request_timeout, 250);
 		}
 	};
 
