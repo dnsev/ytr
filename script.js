@@ -1233,6 +1233,7 @@
 	var wait_count = 0;
 	var matched_ids = {};
 	var active = true;
+	var begin_request_timer = null;
 	var add_result = function (data) {
 		// Already matched
 		if (data.id in matched_ids) return;
@@ -1375,6 +1376,11 @@
 		}
 	};
 
+	var on_begin_request_timeout = function () {
+		begin_request();
+		begin_request_timer = null;
+	};
+
 	var on_data_get = function (data) {
 		if (data === null) {
 			update_counts(1, 0);
@@ -1385,7 +1391,10 @@
 		}
 
 		if (--wait_count <= 0) {
-			begin_request();
+			if (begin_request_timer !== null) {
+				clearTimeout(begin_request_timer);
+			}
+			begin_request_timer = setTimeout(on_begin_request_timeout, 10);
 		}
 	};
 
